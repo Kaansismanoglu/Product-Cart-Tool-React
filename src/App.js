@@ -43,7 +43,7 @@ export default class App extends Component {
 
   getProducts = currentCategory => {
     let url = "http://localhost:3000/products";
-    if (currentCategory !== '' && currentCategory !== 0) {
+    if (currentCategory) {
       url += "?category_id=" + currentCategory;
     }
     fetch(url)
